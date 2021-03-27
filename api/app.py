@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/api/v1/', methods=['GET'])
 def API():
     if request.method == 'GET':
         uri = 'https://www.brainyquote.com'
@@ -37,4 +37,4 @@ def API():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port = 5000)
