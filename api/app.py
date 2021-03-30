@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/api/v1/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def API():
     if request.method == 'GET':
         uri = 'https://www.brainyquote.com'
