@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
-
 import 'ui/home.dart';
 
 void main() {
@@ -17,14 +15,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(
-        backgroundColor: Colors.black,
-        title: Text('Quotes Scrapy',
-        style: TextStyle(
-          color: Colors.white),
-        ),
-      navigateAfterSeconds: Home(),
-      )
-    );
+      home: Home(),
+      );
   }
 }
