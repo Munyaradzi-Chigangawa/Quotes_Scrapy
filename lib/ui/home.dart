@@ -29,15 +29,15 @@ class _MainScreenState extends State<MainScreen> {
   String _Query;
 
   Future<void> getQuotes(query) async {
-    String url = "http://127.0.0.1:59289/?query=$query";
+    String url = "http://127.0.0.1:5000/?query=$query";
     http.Response response = await http.get(url);
     if (response.statusCode == 200) {
       setState(() {
         jsonResponse = convert.jsonDecode(response.body);
         _itemCount = jsonResponse.length;
       });
-//      jsonResponse[0]["author"]; = author name
-//      jsonResponse[0]["quote"]; = quotes text
+      jsonResponse[0]["author"]; = author name
+      jsonResponse[0]["quote"]; = quotes text
       print("Number of quotes found : $_itemCount.");
     } else {
       print("Request failed with status: ${response.statusCode}.");
