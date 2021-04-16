@@ -1,6 +1,6 @@
-# quotes_scrapy
+# Quotes Scrapy
 
-A new Flutter project.
+
 
 ## Getting Started
 
